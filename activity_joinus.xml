@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#434343"
+    android:gravity="center"
+    tools:context=".Joinus">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="JOIN US"
+        android:textColor="#FFFFFF"
+        android:textSize="50dp"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/joinus_name_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:hint=" 이름" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/joinus_id_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:hint=" ID" />
+    <TextView
+        android:id="@+id/joinus_idcheck_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="사용할 수 없는 ID입니다."
+        android:textColor="#FF0000"/>
+    <EditText
+        android:id="@+id/joinus_pw_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:inputType="textPassword"
+        android:hint=" PW" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/joinus_pwcheck_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:inputType="textPassword"
+        android:hint=" PW 확인" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/joinus_email_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:hint=" E-Mail" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/joinus_phone_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:inputType="phone"
+        android:hint=" Phone Number" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/joinus_joinus_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#8e7cc3"
+        android:textColor="#FFFFFF"
+        android:text="회원가입" />
+    <Button
+        android:id="@+id/joinus_login_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#00434343"
+        android:text="로그인 화면"
+        android:textColor="#FFFFFF"
+        android:stateListAnimator="@null"/>
+
+</LinearLayout>
