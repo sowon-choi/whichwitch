@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/additem_todo_edittext"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:hint=" 할 일"
+        android:layout_marginRight="10dp"
+        android:textSize="20dp" />
+
+    <ToggleButton
+        android:id="@+id/additem_share_btn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:textOff="공개"
+        android:textOn="비공개"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:onClick="onToggleClicked"
+        android:background="@drawable/addlist_share_btn"/>
+
+</LinearLayout>

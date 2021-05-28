@@ -4,101 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#434343"
-    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Findpw">
+    android:background="#434343"
+    tools:context=".MainActivity">
 
+    <!--LOGO-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/exlogo"/>
+    </LinearLayout>
+
+    <!--INPUT-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
-
+        <EditText
+            android:id="@+id/login_email_edittext"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="#FFFFFF"
+            android:hint=" Email" />
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:text="PW 찾기"
-            android:textColor="#FFFFFF"
-            android:textSize="50dp"
-            android:textStyle="bold" />
-
+            android:layout_height="wrap_content" />
         <EditText
-            android:id="@+id/findpw_name_edittext"
-            android:layout_width="340dp"
+            android:id="@+id/login_pw_edittext"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#FFFFFF"
-            android:hint=" 이름" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-
-        <EditText
-            android:id="@+id/findpw_id_edittext"
-            android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:background="#FFFFFF"
-            android:hint=" ID" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-
-        <EditText
-            android:id="@+id/findpw_email_edittext"
-            android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:background="#FFFFFF"
-            android:hint=" E-Mail"
-            />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-
-        <EditText
-            android:id="@+id/findpw_phone_edittext"
-            android:layout_width="340dp"
-            android:layout_height="50dp"
-            android:background="#FFFFFF"
-            android:hint=" Phone Number"
-            android:inputType="phone"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=" " />
-
+            android:hint=" PW"
+            android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <!--BUTTON-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
-
         <Button
-            android:id="@+id/findid_sendemail_btn"
-            android:layout_width="340dp"
+            android:id="@+id/login_login_btn"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="#ff9900"
+            android:textColor="#FFFFFF"
+            android:text="로그인" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/login_joinus_btn"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#8e7cc3"
-            android:text="E-Mail 보내기"
-            android:textColor="#FFFFFF" />
-
-        <Button
-            android:id="@+id/findid_login_btn"
-            android:layout_width="340dp"
+            android:textColor="#FFFFFF"
+            android:text="회원가입" />
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#00434343"
-            android:stateListAnimator="@null"
-            android:text="로그인화면"
-            android:textColor="#FFFFFF" />
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/login_findid_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00434343"
+                android:text="Email 찾기"
+                android:textColor="#FFFFFF"
+                android:stateListAnimator="@null"/>
+            <Button
+                android:id="@+id/login_findpw_btn"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00434343"
+                android:text="PW 찾기"
+                android:textColor="#FFFFFF"
+                android:stateListAnimator="@null"/>
+        </LinearLayout>
 
     </LinearLayout>
+
 </LinearLayout>

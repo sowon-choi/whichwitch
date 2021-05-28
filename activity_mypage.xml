@@ -7,87 +7,98 @@
     android:orientation="vertical"
     android:background="#434343"
     android:gravity="center"
-    tools:context=".Joinus">
+
+    tools:context=".Mypage">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
-        android:text="JOIN US"
+        android:layout_gravity="center|top"
+        android:text="내 정보 변경"
         android:textColor="#FFFFFF"
         android:textSize="50dp"
-        android:textStyle="bold"/>
-    <EditText
-        android:id="@+id/joinus_name_edittext"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mypage_name_text"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#FFFFFF"
-        android:hint=" 이름" />
+        android:layout_marginBottom="20dp"
+        android:gravity="center|left"
+        android:text="이름"
+        android:textStyle="bold"
+        android:textSize="20dp"
+         />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <EditText
-        android:id="@+id/joinus_email_edittext"
+        android:id="@+id/mypage_email_text"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#FFFFFF"
-        android:hint=" E-Mail" />
-    <TextView
-        android:id="@+id/joinus_emailcheck_text"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#FF0000"/>
+        android:layout_marginBottom="20dp"
+        android:gravity="center|left"
+        android:text="이메일"
+        android:textStyle="bold"
+        android:textSize="20dp"
+       />
+
     <EditText
-        android:id="@+id/joinus_pw_edittext"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
-        android:inputType="textPassword"
-        android:hint=" PW" />
-    <TextView
-        android:id="@+id/joinus_pwpatterncheck_text"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="#FF0000"/>
-    <EditText
-        android:id="@+id/joinus_pwcheck_edittext"
+        android:id="@+id/mypage_newpw_edittext"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#FFFFFF"
         android:inputType="textPassword"
-        android:hint=" PW 확인" />
+        android:hint="새 비밀번호" />
     <TextView
-        android:id="@+id/joinus_pwcheck_text"
+        android:id="@+id/mypage_newpw_text"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text=""
         android:textColor="#FF0000"/>
 
     <EditText
-        android:id="@+id/joinus_phone_edittext"
+        android:id="@+id/joinus_newpwcheck_edittext"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#FFFFFF"
-        android:inputType="phone"
-        android:hint=" Phone Number" />
+        android:inputType="textPassword"
+        android:hint="새 비밀번호 확인" />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/mypage_newpwcheck_text"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FF0000"/>
+
+    <TextView
+        android:id="@+id/mypage_phone_text"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="30dp"
+        android:text="01000000000"
+        android:gravity="center|left"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
     <Button
-        android:id="@+id/joinus_joinus_btn"
+        android:id="@+id/mypage_cngpw_btn"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#8e7cc3"
         android:textColor="#FFFFFF"
-        android:text="회원가입" />
+        android:layout_marginBottom="10dp"
+        android:text="비밀번호 변경" />
     <Button
-        android:id="@+id/joinus_login_btn"
+        android:id="@+id/mypage_back_btn"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="#00434343"
-        android:text="로그인 화면"
+        android:text="돌아가기"
         android:textColor="#FFFFFF"
+        android:layout_marginBottom="10dp"
         android:stateListAnimator="@null"/>
 
 </LinearLayout>

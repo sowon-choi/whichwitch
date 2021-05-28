@@ -2,102 +2,111 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#434343"
     android:orientation="vertical"
+    android:background="#434343"
     tools:context=".MainActivity">
 
+    <!--LOGO-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical">
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo" />
+            android:src="@drawable/exlogo"/>
     </LinearLayout>
 
+    <!--INPUT-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
-
         <EditText
+            android:id="@+id/login_email_edittext"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#FFFFFF"
-            android:hint=" ID"
-            android:id="@+id/login_id_edittext"
-            />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" "/>
+            android:hint=" Email" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <EditText
+            android:id="@+id/login_pw_edittext"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#FFFFFF"
             android:hint=" PW"
-            android:inputType="textPassword"
-            android:id="@+id/login_pw_edittext"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" "/>
+            android:inputType="textPassword" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/login_check_text"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FF0000"/>
+
+
+
     </LinearLayout>
 
+    <!--BUTTON-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
-
         <Button
             android:id="@+id/login_login_btn"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#ff9900"
-            android:text="로그인"
             android:textColor="#FFFFFF"
-            app:strokeColor="#03A7C0" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=" "/>
+            android:text="로그인" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/login_joinus_btn"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:background="#8e7cc3"
             android:textColor="#FFFFFF"
-            android:text="회원가입"
-            android:id="@+id/login_joinus_btn"/>
+            android:text="회원가입" />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <Button
-                android:background="#00434343"
+                android:id="@+id/login_findemail_btn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="ID찾기"
+                android:layout_weight="1"
+                android:background="#00434343"
+                android:text="Email 찾기"
                 android:textColor="#FFFFFF"
-                android:stateListAnimator = "@null"
-                android:id="@+id/login_findid_btn"/>
+                android:stateListAnimator="@null"/>
             <Button
-                android:background="#00434343"
+                android:id="@+id/login_findpw_btn"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="PW찾기"
+                android:layout_weight="1"
+                android:background="#00434343"
+                android:text="PW 찾기"
                 android:textColor="#FFFFFF"
-                android:stateListAnimator = "@null"
-                android:id="@+id/login_findpw_btn"/>
+                android:stateListAnimator="@null"/>
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
+
+

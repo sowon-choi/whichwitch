@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#434343"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Addlist">
+
+
+    <!--위치반경-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/addlist_location_textview"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:text=" 위치"
+            android:textSize="20dp"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/addlist_radius_textview"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="300m"
+            android:textSize="20dp" />
+
+    </LinearLayout>
+
+    <!--Spinner-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/addlist_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:entries="@array/alarm_time"
+            android:layout_margin="10dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/triangle_down"
+            android:layout_gravity="right"
+            android:layout_margin="18dp"/>
+
+    </FrameLayout>
+
+    <!--할 일 추가 삭제 버튼-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/addlist_addlist_btn"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:background="@drawable/addlist_addlist_btn"
+            android:text="할 일 추가"
+            android:layout_marginRight="15dp"
+            android:onClick="onToggleClicked"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/addlist_dellist_btn"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:background="@drawable/addlist_dellist_btn"
+            android:text="할 일 삭제"
+            android:onClick="onToggleClicked"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!--할 일-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addlist_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!--확인취소-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/addlist_check_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="#8e7cc3"
+            android:text="확인"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <Button
+            android:id="@+id/addlist_cancel_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="#ff9900"
+            android:text="취소"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
+</LinearLayout>

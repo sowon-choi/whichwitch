@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_map"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#434343"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/mapview_address_edittext"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:hint="Enter the Address." />
+
+        <Button
+            android:id="@+id/mapview_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_weight="8"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <fragment
+            android:id="@+id/mapview_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".Map_view" />
+
+        <TextView
+            android:id="@+id/mapview_radius_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="반경:30m"
+            android:textSize="15dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="100dp"
+            android:layout_marginRight="5dp"
+            android:background="#E6FFFFFF"
+            />
+
+        <Button
+            android:id="@+id/mapview_plus_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="50dp"
+            android:layout_marginRight="10dp"
+            android:text="+"
+            android:textSize="30dp"
+            android:background="#E6FFFFFF"/>
+
+        <Button
+            android:id="@+id/mapview_minus_btn"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="10dp"
+            android:text="-"
+            android:textSize="35dp"
+            android:background="#E6FFFFFF"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/mapview_check_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:background="#8e7cc3"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text=" " />
+
+        <Button
+            android:id="@+id/mapview_cancel_btn"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="취소"
+            android:background="#ff9900"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+</LinearLayout>
